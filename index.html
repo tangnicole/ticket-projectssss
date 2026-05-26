@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Show Ticketing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 Spotlight Drama: The Grand Performance</h1>
+        
+        <section class="ticket-selection">
+            <h3>Step 1: Select Your Tickets</h3>
+            <div class="input-group">
+                <label>Number of Tickets ($25 each):</label>
+                <input type="number" id="ticketCount" min="1" value="1">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="addons">
+            <h3>Step 2: Upgrade Your Experience</h3>
+            <div class="addon-item">
+                <input type="checkbox" id="popcorn" value="8">
+                <label for="popcorn">Jumbo Popcorn (+$8.00)</label>
+            </div>
+            <div class="addon-item">
+                <input type="checkbox" id="drink" value="5">
+                <label for="drink">Fountain Soda (+$5.00)</label>
+            </div>
+        </section>
+
+        <div class="total-section">
+            <h2>Total: $<span id="totalPrice">25</span></h2>
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
