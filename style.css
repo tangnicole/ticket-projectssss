@@ -1,37 +1,20 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+function checkout() {
+    const finalPrice = totalDisplay.innerText;
+    
+    // This replaces the whole page with a Thank You message
+    document.querySelector('.container').innerHTML = `
+        <div style="text-align:center; padding: 20px;">
+            <h1 style="font-size: 50px;">✨</h1>
+            <h2>Thank You!</h2>
+            <p>Your booking is complete.</p>
+            <hr style="border: 0.5px solid #444; margin: 20px 0;">
+            <p style="font-style: italic; color: #ffcc00;">
+                "We have received your order. Our team will serve you your popcorn and drinks shortly after you are seated for the drama show."
+            </p>
+            <div style="background: #3d3d3d; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                <p style="margin: 0;">Total Amount: <strong>$${finalPrice}</strong></p>
+            </div>
+            <button onclick="location.reload()" style="margin-top:20px; background: #555;">New Booking</button>
+        </div>
+    `;
 }
-
-.container {
-    background: #2d2d2d;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    width: 100%;
-    max-width: 400px;
-}
-
-h1 { color: #ffcc00; text-align: center; }
-
-.addon-item {
-    margin: 10px 0;
-    font-size: 1.1rem;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    background: #ffcc00;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover { background: #e6b800; }
